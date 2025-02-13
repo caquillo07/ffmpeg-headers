@@ -1,0 +1,14 @@
+prefix=/Users/hmejia/.asdf/installs/ffmpeg/7.1
+exec_prefix=${prefix}
+libdir=/Users/hmejia/.asdf/installs/ffmpeg/7.1/lib
+includedir=/Users/hmejia/.asdf/installs/ffmpeg/7.1/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 61.7.100
+Requires: libavcodec >= 61.19.100, libswresample >= 5.3.100, libavutil >= 59.39.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -lbz2 -lz -framework CoreFoundation -framework Security -L/opt/homebrew/Cellar/rtmpdump/2.4-20151223_3/lib -L/opt/homebrew/Cellar/openssl@3/3.3.2/lib -lrtmp -lz -lssl -lcrypto
+Libs.private: 
+Cflags: -I${includedir}
